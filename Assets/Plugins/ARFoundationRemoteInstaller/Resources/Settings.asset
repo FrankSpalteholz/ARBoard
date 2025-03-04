@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd607c3f010ab45a29ecfcf8d5a898ef, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  ARCompanionAppIP: 192.168.178.112
+  ARCompanionAppIP: 192.168.178.94
   arCompanionSettings:
     cameraVideoSettings:
       enableVideo: 1
@@ -66,15 +66,15 @@ MonoBehaviour:
     printCompanionAppIPsToConsole: 0
     overrideDisplayMatrix: 0
     displayMatrix:
-      e00: 0
-      e01: -0.6161137
+      e00: 1
+      e01: 0
       e02: 0
       e03: 0
-      e10: -1
-      e11: -0
+      e10: -0
+      e11: -0.6161137
       e12: 0
       e13: 0
-      e20: 1
+      e20: 0
       e21: 0.8080569
       e22: 1
       e23: 0
@@ -84,13 +84,13 @@ MonoBehaviour:
       e33: 1
     overrideProjectionMatrix: 0
     projectionMatrix:
-      e00: 3.2947645
+      e00: 1.3604987
       e01: 0
-      e02: 0.0063709617
+      e02: 0.0015259385
       e03: 0
       e10: 0
-      e11: 1.5224622
-      e12: -0.031228542
+      e11: 2.9442587
+      e12: -0.00039041042
       e13: 0
       e20: 0
       e21: 0

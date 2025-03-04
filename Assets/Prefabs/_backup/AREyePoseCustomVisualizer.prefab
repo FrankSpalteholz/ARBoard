@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8445226402345612373}
   - component: {fileID: 8445226402345612375}
-  - component: {fileID: 8445226402345612372}
+  - component: {fileID: 509058987565286600}
   m_Layer: 0
-  m_Name: AR Eye Pose Visualizer
+  m_Name: AREyePoseCustomVisualizer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,12 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8445226402345612378}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8445226402345612375
 MonoBehaviour:
@@ -45,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DestroyOnRemoval: 1
---- !u!114 &8445226402345612372
+--- !u!114 &509058987565286600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,8 +55,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8445226402345612378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2548a2856c1ee4103848bf2b4440e3f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a577d70d9a7b4a0ba73c720aad33052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EyePrefab: {fileID: 1956726250845337899, guid: 643bb4f9636444efebc65bc5ec614d1b,
+  m_EyePrefab: {fileID: 1956726250845337899, guid: 74b41d058635849fa8eaa0232bcddf7d,
     type: 3}
