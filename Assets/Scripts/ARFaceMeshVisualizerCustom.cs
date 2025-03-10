@@ -32,16 +32,18 @@ namespace UnityEngine.XR.ARFoundation
         GameObject m_LeftEyeGameObject;
         GameObject m_RightEyeGameObject;
 
-        [SerializeField]
-        GameObject m_CamFPVPrefab;
+        // [SerializeField]
+        // GameObject m_CamFPVPrefab;
 
-        public GameObject camFPVPrefab
-        {
-            get => m_CamFPVPrefab;
-            set => m_CamFPVPrefab = value;
-        }
+        // public GameObject camFPVPrefab
+        // {
+        //     get => m_CamFPVPrefab;
+        //     set => m_CamFPVPrefab = value;
+        // }
 
-        GameObject m_camFPVGameObject;
+        // GameObject m_camFPVGameObject;
+
+        public GameObject FPVCam;
 
 
 
@@ -57,20 +59,20 @@ namespace UnityEngine.XR.ARFoundation
                 m_RightEyeGameObject = Instantiate(m_EyePrefab, m_Face.rightEye);
                 m_RightEyeGameObject.SetActive(false);
             }
-            if(m_Face.rightEye != null && m_Face.leftEye != null && m_camFPVGameObject == null)
-            {
+            // if(m_Face.rightEye != null && m_Face.leftEye != null && m_camFPVGameObject == null)
+            // {
 
-                m_camFPVGameObject = Instantiate(m_CamFPVPrefab);
-
-                
-
-
-
-                m_camFPVGameObject.SetActive(false);
+            //     m_camFPVGameObject = Instantiate(m_CamFPVPrefab);
 
                 
 
-            }
+
+
+            //     m_camFPVGameObject.SetActive(false);
+
+                
+
+            // }
         }
 
         void SetVisible(bool visible)
@@ -86,7 +88,7 @@ namespace UnityEngine.XR.ARFoundation
             {
                 m_LeftEyeGameObject.SetActive(visible);
                 m_RightEyeGameObject.SetActive(visible);
-                m_camFPVGameObject.SetActive(visible);
+                //m_camFPVGameObject.SetActive(visible);
             }
 
             if(visible && (m_LeftEyeGameObject == null && m_RightEyeGameObject == null))
@@ -160,12 +162,20 @@ namespace UnityEngine.XR.ARFoundation
             SetVisible(visible);
         }
 
+        // void SetCamFPVPosition()
+        // {
+        //     m_camFPVGameObject.transform.position = Vector3.Lerp(m_Face.leftEye.transform.position, m_Face.rightEye.transform.position, 0.5f);
+        //     //m_camFPVGameObject.transform.rotation = Quaternion.Slerp(m_Face.leftEye.rotation, m_Face.rightEye.rotation, 0.5f);
+
+        //     m_camFPVGameObject.transform.rotation = m_Face.transform.rotation;
+        // }
+
         void SetCamFPVPosition()
         {
-            m_camFPVGameObject.transform.position = Vector3.Lerp(m_Face.leftEye.transform.position, m_Face.rightEye.transform.position, 0.5f);
+            FPVCam.transform.position = Vector3.Lerp(m_Face.leftEye.transform.position, m_Face.rightEye.transform.position, 0.5f);
             //m_camFPVGameObject.transform.rotation = Quaternion.Slerp(m_Face.leftEye.rotation, m_Face.rightEye.rotation, 0.5f);
 
-            m_camFPVGameObject.transform.rotation = m_Face.transform.rotation;
+            FPVCam.transform.rotation = m_Face.transform.rotation;
         }
 
         void OnUpdated(ARFaceUpdatedEventArgs eventArgs)
